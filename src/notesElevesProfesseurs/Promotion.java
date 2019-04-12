@@ -33,7 +33,7 @@ public class Promotion {
         return eleves;
     }
 public void Rechercher(String nom){
-    System.out.println("OOOOOOOOOOOOOOOOO");
+
     Iterator<Eleve> iter = eleves.iterator();
     System.out.println("\n Recherche : ");
     while (iter.hasNext()) {
