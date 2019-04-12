@@ -7,11 +7,18 @@ import java.util.Iterator;
 
 public class Promotion {
     String name;
-    Container eleves;
+    ArrayList<Eleve> eleves;
 
-    public Promotion(String name, Component eleve) {
+
+    public Promotion(String name) {
         this.name = name;
+        System.out.println("Promo ajoutée !");
+    }
+
+    public void Add_eleve(Eleve eleve) throws IllegalStateException {
         eleves.add(eleve);
+        System.out.println("Eleve ajoutée !");
+
     }
 
     public String getName() {
@@ -22,11 +29,22 @@ public class Promotion {
         this.name = name;
     }
 
-    public Container getEleves() {
+    public ArrayList<Eleve> getEleves() {
         return eleves;
     }
-public void Rechercher(Container c){
-    Iterator it = c.iterator() ;
+public void Rechercher(String nom){
+    System.out.println("OOOOOOOOOOOOOOOOO");
+    Iterator<Eleve> iter = eleves.iterator();
+    System.out.println("\n Recherche : ");
+    while (iter.hasNext()) {
+        Eleve e = (Eleve) iter.next();
+
+        if(e.nom==nom){
+            System.out.println(iter.next() + " ");
+
+        }
+    }
 }
+
 }
 
