@@ -20,6 +20,6 @@ public class Main1 {
 
         Promotion promo1 = new Promotion("promo1");
         promo1.Add_eleve(e1);
-        promo1.Rechercher("Duval");
+        System.out.println(promo1.Rechercher("Duval"));
     }
 }

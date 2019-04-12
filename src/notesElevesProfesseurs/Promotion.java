@@ -32,18 +32,17 @@ public class Promotion {
     public ArrayList<Eleve> getEleves() {
         return eleves;
     }
-public void Rechercher(String nom){
+public Eleve Rechercher(String nom){
 
     Iterator<Eleve> iter = eleves.iterator();
     System.out.println("\n Recherche : ");
     while (iter.hasNext()) {
-        Eleve e = (Eleve) iter.next();
-
+        Eleve e = iter.next();
         if(e.nom==nom){
-            System.out.println(e.prenom+" "+e.nom + " ");
-
+return e;
         }
     }
+    return null;
 }
 
 }
