@@ -7,7 +7,7 @@ import java.util.Iterator;
 
 public class Promotion {
     String name;
-    ArrayList<Eleve> eleves;
+    ArrayList<Eleve> eleves= new ArrayList<Eleve>();
 
 
     public Promotion(String name) {
@@ -40,7 +40,7 @@ public void Rechercher(String nom){
         Eleve e = (Eleve) iter.next();
 
         if(e.nom==nom){
-            System.out.println(iter.next() + " ");
+            System.out.println(e.prenom+" "+e.nom + " ");
 
         }
     }
