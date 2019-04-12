@@ -14,6 +14,7 @@ public class Eleve  extends Personne  { //QUESTION 1 --> HERITAGE DE LA CLASSE P
     final int NB_EVALUATIONS = 10;
     ArrayList<Evaluation> evaluations=new ArrayList<>();
     HashSet<Professeur> list_correcteur=new HashSet();
+    Promotion promo;
 
     public Eleve(String prenom,String nom,String date) {
         super(prenom, nom);
@@ -36,6 +37,10 @@ public class Eleve  extends Personne  { //QUESTION 1 --> HERITAGE DE LA CLASSE P
         }
     }
 
+    public void setPromo(Promotion promo) {
+        this.promo = promo;
+    }
+
     public double calculMoyenne() throws IllegalStateException {
 
     verifierEval();
@@ -46,10 +51,6 @@ public class Eleve  extends Personne  { //QUESTION 1 --> HERITAGE DE LA CLASSE P
         cumul=cumul+evaluations.get(i).getNote();
 
     return cumul/evaluations.size();
-
-
-
-
     }
 
     public double median() {
@@ -99,8 +100,9 @@ public class Eleve  extends Personne  { //QUESTION 1 --> HERITAGE DE LA CLASSE P
             n= String.valueOf(evaluations.get(i).getNote());
             notes.add(n);
         }
-        return "("+this.prenom+","+this.nom+") "+
+        return "\nELEVE\n"+"("+this.prenom+","+this.nom+") "+"\n"+
                 "id = " + id_Etudiant +"\n"+
+                "promotion = "+ promo+"\n"+
                 "notes:"+ notes+ "\n"+
                 "Moyenne ="+this.calculMoyenne()+"\n"+
                 "Median ="+this.median()+"\n"+

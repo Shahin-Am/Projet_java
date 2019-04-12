@@ -18,7 +18,7 @@ public class Promotion {
     public void Add_eleve(Eleve eleve) throws IllegalStateException {
         eleves.add(eleve);
         System.out.println("Eleve ajoutée !");
-
+    eleve.setPromo(this);
     }
 
     public String getName() {
@@ -45,5 +45,9 @@ return e;
     return null;
 }
 
+    @Override
+    public String toString() {
+        return  name ;
+    }
 }
 
