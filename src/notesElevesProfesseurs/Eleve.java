@@ -16,9 +16,12 @@ public class Eleve  extends Personne  { //QUESTION 1 --> HERITAGE DE LA CLASSE P
     HashSet<Professeur> list_correcteur=new HashSet();
     Promotion promo;
 
-    public Eleve(String prenom,String nom,String date) {
+
+
+    public Eleve(String prenom,String nom,String date, int id) {
         super(prenom, nom);
         date_naissance = date ;
+id_Etudiant=id;
     }
 
     public int getId_Etudiant() {
@@ -28,6 +31,9 @@ public class Eleve  extends Personne  { //QUESTION 1 --> HERITAGE DE LA CLASSE P
     {
         evaluations.add(nEvaluations);
     }
+
+
+
 
     private void verifierEval() throws IllegalStateException {
 

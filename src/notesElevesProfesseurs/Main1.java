@@ -3,8 +3,8 @@ package notesElevesProfesseurs;
 public class Main1 {
     public static void main(String[] args) {
 
-        Eleve e1 = new Eleve("Jean","Duval","12/04/1998");
-        Eleve e2 = new Eleve("Alexandra","Bergot","19/12/2000");
+        Eleve e1 = new Eleve("Jean","Duval","12/04/1998",0);
+        Eleve e2 = new Eleve("Alexandra","Bergot","19/12/2000",1);
 
         Professeur p1 = new Professeur("Jack", "Dutronc");
         Professeur p2 = new Professeur("Alice", "Thirard");
@@ -23,7 +23,6 @@ public class Main1 {
 
         System.out.println(e1.getEvaluations());
         System.out.println(e1.getList_correcteur());
-        System.out.println(e1);
 
         Promotion promo1 = new Promotion("promo1");
         Promotion promo2 = new Promotion("promo2");
@@ -31,8 +30,10 @@ public class Main1 {
         promo1.Add_eleve(e1);
         promo2.Add_eleve(e2);
 
+        System.out.println(e1);
+        System.out.println(e2);
+
         System.out.println(promo2.Rechercher("Bergot"));
-        //System.out.println(e1);
-        //System.out.println(promo1.Rechercher("Bergot"));
+        System.out.println(p1.Rechercher(promo2,1));
     }
 }

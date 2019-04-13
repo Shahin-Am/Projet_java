@@ -7,13 +7,13 @@ public class Professeur extends Personne { //QUESTION 1 --> HERITAGE DE LA CLASS
     public Professeur(String prenom,String nom) {
         super(prenom,nom);
     }
-    public Eleve Rechercher(Promotion promo, String nom){
+    public Eleve Rechercher(Promotion promo, int id){
 
         Iterator<Eleve> iter = promo.eleves.iterator();
         System.out.println("\n Recherche : ");
         while (iter.hasNext()) {
             Eleve e = iter.next();
-            if(e.nom==nom){
+            if(e.id_Etudiant==id){
                 return e;
             }
         }
